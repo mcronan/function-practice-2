@@ -15,7 +15,6 @@
 // 	age: 27
 // });
 
-
 /**************************************
 				2.
 ***************************************/
@@ -29,7 +28,6 @@
 // 	var string = array.join('').length
 // 	return string
 // }
-
 
 // totalLetters(['javascript', 'is', 'awesome'])
 
@@ -68,7 +66,6 @@
 // }
 
 // negativeIndex(['a', 'b', 'c', 'd', 'e'], -2)
-
 
 /**************************************
 				5.
@@ -132,65 +129,105 @@
 				 8.
 ***************************************/
 
-// var twins = function(input) {
-// 	var array = input;
-	
-// //turn to object
-// // dynamically create key-value paris out of 
-// // the array
-// // loop through and compare those
+// var twins = function(array) {
 
-// // this turns into an infinite loop if set to array.length
+// var even = []
+// var odd = []
+
 // for(var i = 0; i < array.length; i ++ ) {
-
-// 	var even = []
-// 	var odd = []
+// 	// debugger
+// 	// check what the value is here with the debugger
+// 	var zero = even[0]
 
 // 	if(i % 2 === 0) {
 // 		 even.push(array[i])
 // 		 } else {
 // 		 odd.push(array[i])
 // 		 }
+// }
 
-// // this turns into an infinite loop if set to odd/even.length
-// for(var i = 0; i < 3; i ++ ) {
-// 	if(even[i] === odd[i]) {
-// 		console.log("Yes!")
+// for(var j = 0; j < 3; j ++ ) {
+// 	if(even[j] !== odd[j]) {
+// 		console.log("Not Twins!")
+// 			} else {
+// 				console.log("twins")
 // 			}
 // 		}
 
 // 	}
 
+
+// // different way
+// function myTwins(arr) {
+// 	if (arr.length % 2 !== 0){
+// 		return 'not'
+// 	}
+
+// debugger
+// 	for (var i = 0; i < arr.length; i += 2) {
+		
+// 		if ( arr[i] !== arr[i + 1] ) {
+			
+// 			return 'NOT'
+// 		}
+// 	}
+
+// 	return 'twins'
 // }
 
 // twins(['a','a','b','b', 'c', 'c' ])
-
 
 
 /**************************************
 				 9.
 ***************************************/
 
+/**** use the map method this time ****/
+	
+// var or = function(theArray) {
+// 	var findTruth = function(find) {	
+	
+// 		var result = false
+// 		if (theArray.length === 0) {
+// 			}
+// 		else if (find === true) {
+// 			result = true
+// 		} 
+//  		return result
+// 		}
 
-var or = function(theArray) {
+// 	    var looper = theArray.map( function(item){
+// 		return item}).filter(findTruth)
+	    
+// 	    if(looper.length >= 1) {
+// 	    	console.log(true)
+// 	    } else {
+// 	    	console.log(false)
+// 	    }
+// }
 
-	var findTruth = function(find) {
-		if(find === true) {
-			console.log(true)
-		} else {
-			console.log(false)
-		}
+//  // or([false, false, true, false, true])
+//  or([false, false, false]) 
+//  // or([])
 
+/**************************************
+				 10.
+***************************************/
+
+var unique = function(theArray){
+
+	obj = {}
+	for(i = 0; i < theArray.length; i ++ ) {
+		obj[theArray[i]]= ''
 	}
-	var result = theArray.filter(findTruth)
-	console.log(result)
+
+	for(key in obj) {
+	var uniqueArray = [];
+		uniqueArray.push(key)
+		console.log(uniqueArray)
+	}	
 }
 
-
-
-or([false, false, true, false]) 
-// or([false, false, false]) 
-// or([])
-
+unique(['a', 'b', 'a', 'c', 'd', 'd'])
 
 
